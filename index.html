@@ -8,23 +8,44 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
         body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8fafc; color: #334155; }
-        /* 將原本極深的藍灰(#1e293b)調淺為沉穩的灰藍(#334155) */
         .bg-corporate { background-color: #334155; } 
         .text-accent { color: #38bdf8; } 
-        .patent-border { border-left: 4px solid #475569; }
-        .wave-transition { fill: #334155; } /* 波浪顏色同步調淺 */
+        .wave-transition { fill: #334155; } 
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- 1. 痛點與市場現況區塊 (加入淺藍色底色 bg-blue-50) -->
-    <section class="pt-24 pb-16 px-6 w-full bg-blue-50">
+    <!-- 1. 痛點與市場現況區塊 -->
+    <section class="pt-20 pb-16 px-6 w-full bg-blue-50">
         <div class="max-w-5xl mx-auto">
-            <div class="text-center mb-16">
+            <div class="text-center mb-12">
                 <span class="text-red-500 font-bold tracking-widest text-sm md:text-base uppercase mb-4 block">Real Estate Transaction Crisis</span>
                 <h1 class="text-4xl md:text-5xl font-black text-slate-800 mb-6 leading-tight">不動產交易的最大地雷：<br class="md:hidden"><span class="text-red-600">物之瑕疵擔保</span></h1>
                 <p class="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
-                    依《民法》第 354 條規定，賣方負有「無過失責任」。爭議核心往往在於第 365 條的時點判定——<strong class="text-slate-800">「這究竟是交屋前的舊傷，還是交屋後的新損？」</strong>原屋主心煩、新屋主心痛、中介心累。
+                    依《民法》第 354 條規定，賣方負有「無過失責任」。爭議核心往往在於第 365 條的時點判定——<strong class="text-slate-800">「這究竟是交屋前的舊傷，還是交屋後的新損？」</strong>
+                </p>
+            </div>
+
+            <!-- 新增：痛點故事區塊 -->
+            <div class="bg-white border-l-4 border-red-500 p-6 md:p-10 rounded-r-xl shadow-lg mb-16 max-w-4xl mx-auto text-left relative overflow-hidden">
+                <!-- 背景淡浮水印 -->
+                <div class="absolute top-0 right-0 opacity-5">
+                    <svg class="w-48 h-48 -mt-8 -mr-8 text-red-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22M12 6l7.53 13H4.47M11 10v4h2v-4m-2 6v2h2v-2"></path></svg>
+                </div>
+                
+                <h3 class="text-xl font-bold text-slate-800 mb-5 flex items-center gap-2 relative z-10">
+                    <svg class="w-6 h-6 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    最常聽到的真實案例：
+                </h3>
+                
+                <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-4 relative z-10">
+                    交屋才剛滿半年，幾場連日大雨過後，客廳窗框旁竟悄悄浮出一大片水漬與壁癌。
+                </p>
+                <p class="text-slate-600 text-base md:text-lg leading-relaxed mb-4 relative z-10">
+                    新屋主黃先生急忙聯絡仲介通知原屋主江小姐請求漏水修繕，江小姐滿腹委屈地說：<strong class="text-slate-800">「我住了十年都沒事了，也有可能是你裝潢時破壞到外牆防水層，如何說是在我持有期間就發生的狀況？」</strong>
+                </p>
+                <p class="text-red-600 text-base md:text-lg leading-relaxed font-bold relative z-10">
+                    夾在中間的房仲小王滿臉無奈。交屋前沒有留下客觀的科學檢測數據，如今死無對證，雙方只能憑著「自由心證」互相指責。眼看不僅案件可能產生退款糾紛，接下來無止盡的調解會與法律訴訟，更將嚴重耗費三方巨大的時間與金錢。望著那片漏水的牆，這場糾紛注定沒有贏家。
                 </p>
             </div>
 
@@ -84,65 +105,57 @@
         </div>
     </section>
 
-    <!-- 色彩平滑過渡區塊 (SVG 流體波浪，底色加上 bg-blue-50 銜接上一段) -->
+    <!-- 色彩平滑過渡區塊 -->
     <div class="w-full overflow-hidden leading-none translate-y-[2px] relative z-20 bg-blue-50">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[50px] md:h-[90px] wave-transition">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,123.63,200.27,109.11,241.6,100.47,281.06,78.53,321.39,56.44Z"></path>
         </svg>
     </div>
 
-    <!-- 2. 主視覺區 / 解決方案揭曉 (色彩已調淺為 bg-corporate / #334155) -->
+    <!-- 2. 主視覺區 / 解決方案揭曉 (大標與副標重構) -->
     <section class="bg-corporate text-white relative px-6 pt-12 pb-24 md:pb-32 flex flex-col items-center text-center overflow-hidden">
-        <!-- 點陣背景裝飾 -->
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#94a3b8 1px, transparent 1px); background-size: 24px 24px;"></div>
         
-        <div class="relative z-10 max-w-5xl mx-auto">
-            <span class="text-accent font-bold tracking-widest text-sm md:text-base uppercase mb-4 block">Yuyang Engineering Real Estate Security</span>
-            <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
-                從「事後糾紛」轉向<span class="text-accent">「事前保全」</span>
+        <div class="relative z-10 max-w-5xl mx-auto w-full">
+            <span class="text-accent font-bold tracking-widest text-sm md:text-base uppercase mb-6 block">Yuyang Engineering Real Estate Security</span>
+            
+            <h2 class="text-4xl md:text-6xl lg:text-7xl font-black mb-8 leading-tight tracking-wide">
+                牆面水分子分佈視覺化系統
             </h2>
-            <p class="text-xl md:text-2xl text-slate-300 font-medium mb-4">牆面水分子分佈視覺化系統</p>
-            <p class="text-lg text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
+            
+            <p class="text-xl md:text-3xl text-slate-200 font-bold mb-6 leading-relaxed">
                 不動產的健康存摺，提供買賣雙方不動產當下的實際屋況。
             </p>
             
-            <!-- 專利背書 -->
-            <div class="bg-slate-700/80 p-5 rounded-lg text-left inline-block max-w-3xl border border-slate-600 shadow-xl">
-                <p class="text-accent font-bold mb-1 text-sm md:text-base">🛡️ 獨家專利技術</p>
-                <p class="text-slate-200 text-sm leading-relaxed">
-                    本系統採用「一種基於多色特徵標記與人工智慧視覺之建築物瑕疵自動診斷系統及方法」，中華民國智慧財產局專利案號：115119398（申請中）。
-                </p>
-            </div>
+            <p class="text-lg md:text-xl text-accent font-medium max-w-2xl mx-auto tracking-widest bg-slate-800/50 py-3 px-6 rounded-full inline-block border border-slate-600">
+                從「事後糾紛」轉向「事前保全」
+            </p>
         </div>
     </section>
 
-    <!-- 3. 解決方案與四大優勢 (移除圖示、移除浮動特效、字體放大) -->
+    <!-- 3. 解決方案與四大優勢 -->
     <section class="bg-slate-200/50 py-20 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-16">昱揚工程的數位防護網</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- 卡片一 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-shadow hover:shadow-md">
                     <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-wide">直觀易懂的視覺化</h3>
                     <p class="text-slate-600 text-base leading-relaxed">
                         清楚的顏色區分，將艱澀的水分子數值轉化為熱圖，不需要內行人也能明白分辨牆面狀態。
                     </p>
                 </div>
-                <!-- 卡片二 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-shadow hover:shadow-md">
                     <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-wide">精確的屋況快照</h3>
                     <p class="text-slate-600 text-base leading-relaxed">
                         完整紀錄賣家售屋時，或是買家買屋當下的客觀屋況，確實的圖說大大減低仲介的壓力。
                     </p>
                 </div>
-                <!-- 卡片三 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-shadow hover:shadow-md">
                     <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-wide">雲端電子備查</h3>
                     <p class="text-slate-600 text-base leading-relaxed">
                         取得數值並輸入系統分析後，提交正式書面報告，且電子檔案資料將嚴格備查 5 年，確保證據時效。
                     </p>
                 </div>
-                <!-- 卡片四 -->
                 <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-shadow hover:shadow-md">
                     <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-wide">極高的性價比</h3>
                     <p class="text-slate-600 text-base leading-relaxed">
@@ -153,7 +166,7 @@
         </div>
     </section>
 
-    <!-- 4. 實績展示區塊 (含 PDF 下載) -->
+    <!-- 4. 實績展示區塊 -->
     <section class="py-20 px-6 max-w-5xl mx-auto">
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-4">實務檢測分析報告</h2>
@@ -161,7 +174,6 @@
         </div>
 
         <div class="bg-white p-4 md:p-8 rounded-2xl shadow-lg border border-slate-200">
-            <!-- 報告說明 -->
             <div class="mb-8 border-l-4 border-blue-500 pl-4">
                 <h3 class="text-xl font-bold text-slate-800 mb-2">多色特徵標記解析</h3>
                 <p class="text-slate-600 text-base">
@@ -169,15 +181,13 @@
                 </p>
             </div>
             
-            <!-- 數位報告熱圖展示區 -->
             <div class="w-full aspect-video bg-slate-100 rounded-lg border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400 mb-8 relative overflow-hidden">
-                <!-- 阿智哥，請將截圖命名為 report-demo.jpg 並上傳，然後解除下方 img 標籤註解即可 -->
+                <!-- 記得將截圖命名為 report-demo.jpg 並上傳，然後解除下方 img 標籤註解 -->
                 <!-- <img src="./report-demo.jpg" alt="水分子熱圖分析對比" class="w-full h-full object-contain"> -->
                 <svg class="w-12 h-12 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 <p>數位報告熱圖展示區 (請上傳您的 report-demo.jpg)</p>
             </div>
 
-            <!-- PDF 完整報告下載按鈕 -->
             <div class="mt-10 text-center border-t border-slate-100 pt-8">
                 <a href="./w_report.pdf" target="_blank" class="inline-flex items-center justify-center gap-3 bg-slate-700 hover:bg-blue-600 text-white text-base md:text-lg font-bold py-4 px-8 rounded-full transition-all duration-300 border border-slate-600 hover:border-blue-500 shadow-lg hover:shadow-blue-500/30 w-full md:w-auto">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
@@ -188,26 +198,42 @@
         </div>
     </section>
 
-    <!-- 5. 頁尾與行動呼籲 (配合深藍灰調整底色) -->
+    <!-- 5. 頁尾 (專利與公司資料並列) -->
     <footer class="bg-corporate text-slate-300 py-16 border-t-4 border-blue-500">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
-                「領先一步的科技，是維護品牌聲譽最強的盾牌。」
-            </h2>
-            <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
-                漏水糾紛不應是不動產交易的必然風險。我司誠摯邀請 貴司共同建立「不動產交易安全新標準」，為消費者提供高標準的交易安全保障。
-            </p>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
+                    「領先一步的科技，是維護品牌聲譽最強的盾牌。」
+                </h2>
+                <p class="text-lg text-slate-300 max-w-2xl mx-auto">
+                    漏水糾紛不應是不動產交易的必然風險。我司誠摯邀請 貴司共同建立「不動產交易安全新標準」，為消費者提供高標準的交易安全保障。
+                </p>
+            </div>
             
-            <div class="inline-block text-left bg-slate-800/40 p-6 md:p-8 rounded-xl border border-slate-600 shadow-lg">
-                <h3 class="text-xl font-bold text-white mb-4 tracking-wider">昱揚工程有限公司</h3>
-                <div class="space-y-3 text-sm md:text-base">
-                    <p><span class="text-accent font-bold mr-2">專案負責：</span>洪健智 講師</p>
-                    <p><span class="text-accent font-bold mr-2">聯絡電話：</span>0928-525887 / 02-2277-7602</p>
-                    <p><span class="text-accent font-bold mr-2">公司地址：</span>新北市新莊區中平路26巷30號5樓</p>
+            <!-- 公司資料與專利並列的 Grid 佈局 -->
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- 公司資料 -->
+                <div class="bg-slate-800/40 p-6 md:p-8 rounded-xl border border-slate-600 shadow-lg text-left">
+                    <h3 class="text-xl font-bold text-white mb-4 tracking-wider">昱揚工程有限公司</h3>
+                    <div class="space-y-3 text-sm md:text-base">
+                        <p><span class="text-accent font-bold mr-2">專案負責：</span>洪健智 講師</p>
+                        <p><span class="text-accent font-bold mr-2">聯絡電話：</span>0928-525887 / 02-2277-7602</p>
+                        <p><span class="text-accent font-bold mr-2">公司地址：</span>新北市新莊區中平路26巷30號5樓</p>
+                    </div>
+                </div>
+
+                <!-- 專利背書 (移至此處) -->
+                <div class="bg-slate-800/40 p-6 md:p-8 rounded-xl border border-slate-600 shadow-lg text-left flex flex-col justify-center">
+                    <p class="text-accent font-bold mb-3 text-lg md:text-xl flex items-center gap-2">
+                        獨家專利技術
+                    </p>
+                    <p class="text-slate-200 text-sm md:text-base leading-relaxed">
+                        本系統採用「一種基於多色特徵標記與人工智慧視覺之建築物瑕疵自動診斷系統及方法」，中華民國智慧財產局專利案號：115119398（申請中）。
+                    </p>
                 </div>
             </div>
             
-            <div class="mt-12 text-sm text-slate-400 font-mono">
+            <div class="mt-12 text-center text-sm text-slate-400 font-mono">
                 &copy; 2026 Yuyang Engineering Co., Ltd. All Rights Reserved.
             </div>
         </div>

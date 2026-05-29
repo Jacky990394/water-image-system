@@ -8,87 +8,90 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
         body { font-family: 'Noto Sans TC', sans-serif; background-color: #f8fafc; color: #334155; }
-        .bg-corporate { background-color: #1e293b; } /* 沉穩的深藍灰色 */
-        .text-accent { color: #38bdf8; } /* 專業的亮藍色點綴 */
+        /* 將原本極深的藍灰(#1e293b)調淺為沉穩的灰藍(#334155) */
+        .bg-corporate { background-color: #334155; } 
+        .text-accent { color: #38bdf8; } 
         .patent-border { border-left: 4px solid #475569; }
-        .wave-transition { fill: #1e293b; } /* 對齊深藍灰背景，柔和過渡 */
+        .wave-transition { fill: #334155; } /* 波浪顏色同步調淺 */
     </style>
 </head>
 <body class="antialiased">
 
-    <!-- 1. 痛點與市場現況區塊 (Hook) -->
-    <section class="pt-24 pb-16 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-16">
-            <span class="text-red-500 font-bold tracking-widest text-sm md:text-base uppercase mb-4 block">Real Estate Transaction Crisis</span>
-            <h1 class="text-4xl md:text-5xl font-black text-slate-800 mb-6 leading-tight">不動產交易的最大地雷：<br class="md:hidden"><span class="text-red-600">物之瑕疵擔保</span></h1>
-            <p class="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
-                依《民法》第 354 條規定，賣方負有「無過失責任」。爭議核心往往在於第 365 條的時點判定——<strong class="text-slate-800">「這究竟是交屋前的舊傷，還是交屋後的新損？」</strong>原屋主心煩、新屋主心痛、中介心累。
-            </p>
-        </div>
+    <!-- 1. 痛點與市場現況區塊 (加入淺藍色底色 bg-blue-50) -->
+    <section class="pt-24 pb-16 px-6 w-full bg-blue-50">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <span class="text-red-500 font-bold tracking-widest text-sm md:text-base uppercase mb-4 block">Real Estate Transaction Crisis</span>
+                <h1 class="text-4xl md:text-5xl font-black text-slate-800 mb-6 leading-tight">不動產交易的最大地雷：<br class="md:hidden"><span class="text-red-600">物之瑕疵擔保</span></h1>
+                <p class="text-slate-600 text-lg max-w-3xl mx-auto leading-relaxed">
+                    依《民法》第 354 條規定，賣方負有「無過失責任」。爭議核心往往在於第 365 條的時點判定——<strong class="text-slate-800">「這究竟是交屋前的舊傷，還是交屋後的新損？」</strong>原屋主心煩、新屋主心痛、中介心累。
+                </p>
+            </div>
 
-        <!-- 官方數據表格 -->
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden mb-8">
-            <div class="bg-slate-100 px-6 py-4 border-b border-slate-200">
-                <h3 class="font-bold text-slate-700 text-lg">全台不動產交易滲漏水法律爭議實績 (110-114年)</h3>
-            </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse min-w-[600px]">
-                    <thead>
-                        <tr class="bg-slate-50 text-slate-500 text-sm uppercase tracking-wider">
-                            <th class="px-6 py-4 border-b border-slate-200">年度</th>
-                            <th class="px-6 py-4 border-b border-slate-200">糾紛總件數</th>
-                            <th class="px-6 py-4 border-b border-slate-200">滲漏水爭議件數</th>
-                            <th class="px-6 py-4 border-b border-slate-200 font-bold text-red-500">佔比</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-slate-700">
-                        <tr class="hover:bg-slate-50 transition-colors">
-                            <td class="px-6 py-4 border-b border-slate-100">110 年</td>
-                            <td class="px-6 py-4 border-b border-slate-100">1,844 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100">774 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100 font-bold text-slate-800">42%</td>
-                        </tr>
-                        <tr class="hover:bg-slate-50 transition-colors">
-                            <td class="px-6 py-4 border-b border-slate-100">111 年</td>
-                            <td class="px-6 py-4 border-b border-slate-100">2,001 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100">900 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100 font-bold text-slate-800">45%</td>
-                        </tr>
-                        <tr class="hover:bg-slate-50 transition-colors">
-                            <td class="px-6 py-4 border-b border-slate-100">112 年</td>
-                            <td class="px-6 py-4 border-b border-slate-100">2,148 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100">1,031 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100 font-bold text-slate-800">48%</td>
-                        </tr>
-                        <tr class="hover:bg-slate-50 transition-colors">
-                            <td class="px-6 py-4 border-b border-slate-100">113 年</td>
-                            <td class="px-6 py-4 border-b border-slate-100">2,312 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100">1,179 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100 font-bold text-slate-800">51%</td>
-                        </tr>
-                        <tr class="bg-red-50/70 hover:bg-red-50 transition-colors">
-                            <td class="px-6 py-4 border-b border-slate-100 font-medium">114 年</td>
-                            <td class="px-6 py-4 border-b border-slate-100 font-medium">2,460 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100 font-medium">1,304 件</td>
-                            <td class="px-6 py-4 border-b border-slate-100 font-black text-red-600 text-lg">53% (激增)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="px-6 py-4 bg-slate-50 text-xs text-slate-500 border-t border-slate-200">
-                *註：本表數據僅計入進入調解或訴訟程序之案件，實務黑數推估為此數據之 5 至 8 倍。
+            <!-- 官方數據表格 -->
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden mb-8">
+                <div class="bg-slate-100 px-6 py-4 border-b border-slate-200">
+                    <h3 class="font-bold text-slate-700 text-lg">全台不動產交易滲漏水法律爭議實績 (110-114年)</h3>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse min-w-[600px]">
+                        <thead>
+                            <tr class="bg-slate-50 text-slate-500 text-sm uppercase tracking-wider">
+                                <th class="px-6 py-4 border-b border-slate-200">年度</th>
+                                <th class="px-6 py-4 border-b border-slate-200">糾紛總件數</th>
+                                <th class="px-6 py-4 border-b border-slate-200">滲漏水爭議件數</th>
+                                <th class="px-6 py-4 border-b border-slate-200 font-bold text-red-500">佔比</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-700">
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 border-b border-slate-100">110 年</td>
+                                <td class="px-6 py-4 border-b border-slate-100">1,844 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100">774 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100 font-bold text-slate-800">42%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 border-b border-slate-100">111 年</td>
+                                <td class="px-6 py-4 border-b border-slate-100">2,001 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100">900 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100 font-bold text-slate-800">45%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 border-b border-slate-100">112 年</td>
+                                <td class="px-6 py-4 border-b border-slate-100">2,148 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100">1,031 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100 font-bold text-slate-800">48%</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 transition-colors">
+                                <td class="px-6 py-4 border-b border-slate-100">113 年</td>
+                                <td class="px-6 py-4 border-b border-slate-100">2,312 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100">1,179 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100 font-bold text-slate-800">51%</td>
+                            </tr>
+                            <tr class="bg-red-50/70 hover:bg-red-50 transition-colors">
+                                <td class="px-6 py-4 border-b border-slate-100 font-medium">114 年</td>
+                                <td class="px-6 py-4 border-b border-slate-100 font-medium">2,460 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100 font-medium">1,304 件</td>
+                                <td class="px-6 py-4 border-b border-slate-100 font-black text-red-600 text-lg">53% (激增)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="px-6 py-4 bg-slate-50 text-xs text-slate-500 border-t border-slate-200">
+                    *註：本表數據僅計入進入調解或訴訟程序之案件，實務黑數推估為此數據之 5 至 8 倍。
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 色彩平滑過渡區塊 (SVG 流體波浪) -->
-    <div class="w-full overflow-hidden leading-none translate-y-[2px] relative z-20">
+    <!-- 色彩平滑過渡區塊 (SVG 流體波浪，底色加上 bg-blue-50 銜接上一段) -->
+    <div class="w-full overflow-hidden leading-none translate-y-[2px] relative z-20 bg-blue-50">
         <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[50px] md:h-[90px] wave-transition">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,123.63,200.27,109.11,241.6,100.47,281.06,78.53,321.39,56.44Z"></path>
         </svg>
     </div>
 
-    <!-- 2. 主視覺區 / 解決方案揭曉 -->
+    <!-- 2. 主視覺區 / 解決方案揭曉 (色彩已調淺為 bg-corporate / #334155) -->
     <section class="bg-corporate text-white relative px-6 pt-12 pb-24 md:pb-32 flex flex-col items-center text-center overflow-hidden">
         <!-- 點陣背景裝飾 -->
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#94a3b8 1px, transparent 1px); background-size: 24px 24px;"></div>
@@ -99,50 +102,50 @@
                 從「事後糾紛」轉向<span class="text-accent">「事前保全」</span>
             </h2>
             <p class="text-xl md:text-2xl text-slate-300 font-medium mb-4">牆面水分子分佈視覺化系統</p>
-            <p class="text-lg text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+            <p class="text-lg text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed">
                 不動產的健康存摺，提供買賣雙方不動產當下的實際屋況。
             </p>
             
             <!-- 專利背書 -->
-            <div class="bg-slate-800/80 p-5 rounded-lg text-left inline-block max-w-3xl border border-slate-700 shadow-xl">
+            <div class="bg-slate-700/80 p-5 rounded-lg text-left inline-block max-w-3xl border border-slate-600 shadow-xl">
                 <p class="text-accent font-bold mb-1 text-sm md:text-base">🛡️ 獨家專利技術</p>
-                <p class="text-slate-300 text-sm leading-relaxed">
+                <p class="text-slate-200 text-sm leading-relaxed">
                     本系統採用「一種基於多色特徵標記與人工智慧視覺之建築物瑕疵自動診斷系統及方法」，中華民國智慧財產局專利案號：115119398（申請中）。
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- 3. 解決方案與四大優勢 -->
+    <!-- 3. 解決方案與四大優勢 (移除圖示、移除浮動特效、字體放大) -->
     <section class="bg-slate-200/50 py-20 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-16">昱揚工程的數位防護網</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow hover:-translate-y-1 transform duration-300">
-                    <div class="text-blue-500 text-3xl mb-4">👁️</div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">直觀易懂的視覺化</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
+                <!-- 卡片一 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-shadow hover:shadow-md">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-wide">直觀易懂的視覺化</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
                         清楚的顏色區分，將艱澀的水分子數值轉化為熱圖，不需要內行人也能明白分辨牆面狀態。
                     </p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow hover:-translate-y-1 transform duration-300">
-                    <div class="text-blue-500 text-3xl mb-4">📸</div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">精確的屋況快照</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
+                <!-- 卡片二 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-shadow hover:shadow-md">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-wide">精確的屋況快照</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
                         完整紀錄賣家售屋時，或是買家買屋當下的客觀屋況，確實的圖說大大減低仲介的壓力。
                     </p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow hover:-translate-y-1 transform duration-300">
-                    <div class="text-blue-500 text-3xl mb-4">💾</div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">雲端電子備查</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
+                <!-- 卡片三 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-shadow hover:shadow-md">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-wide">雲端電子備查</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
                         取得數值並輸入系統分析後，提交正式書面報告，且電子檔案資料將嚴格備查 5 年，確保證據時效。
                     </p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition-shadow hover:-translate-y-1 transform duration-300">
-                    <div class="text-blue-500 text-3xl mb-4">⚖️</div>
-                    <h3 class="text-xl font-bold text-slate-800 mb-3">極高的性價比</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
+                <!-- 卡片四 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 transition-shadow hover:shadow-md">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-4 tracking-wide">極高的性價比</h3>
+                    <p class="text-slate-600 text-base leading-relaxed">
                         實惠的檢測價格，為交易買上一份保險。其價值絕非日後打官司，以及買、賣、仲介三方所耗費的時間金錢可比擬。
                     </p>
                 </div>
@@ -161,14 +164,14 @@
             <!-- 報告說明 -->
             <div class="mb-8 border-l-4 border-blue-500 pl-4">
                 <h3 class="text-xl font-bold text-slate-800 mb-2">多色特徵標記解析</h3>
-                <p class="text-slate-600">
+                <p class="text-slate-600 text-base">
                     系統將牆面水分子濃度量化。如圖所示，安全乾燥區域以灰色/透明呈現；當偵測到潛在水源，數值攀升至警戒範圍，系統將自動生成紅色熱區，精準標定肉眼無法察覺的水氣積累。
                 </p>
             </div>
             
-            <!-- 預留給阿智哥上傳圖片的區塊 -->
+            <!-- 數位報告熱圖展示區 -->
             <div class="w-full aspect-video bg-slate-100 rounded-lg border-2 border-dashed border-slate-300 flex flex-col items-center justify-center text-slate-400 mb-8 relative overflow-hidden">
-                <!-- 記得將截圖命名為 report-demo.jpg 並上傳，然後解除下方 img 標籤註解 -->
+                <!-- 阿智哥，請將截圖命名為 report-demo.jpg 並上傳，然後解除下方 img 標籤註解即可 -->
                 <!-- <img src="./report-demo.jpg" alt="水分子熱圖分析對比" class="w-full h-full object-contain"> -->
                 <svg class="w-12 h-12 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                 <p>數位報告熱圖展示區 (請上傳您的 report-demo.jpg)</p>
@@ -176,7 +179,7 @@
 
             <!-- PDF 完整報告下載按鈕 -->
             <div class="mt-10 text-center border-t border-slate-100 pt-8">
-                <a href="./w_report.pdf" target="_blank" class="inline-flex items-center justify-center gap-3 bg-slate-800 hover:bg-blue-600 text-white text-base md:text-lg font-bold py-4 px-8 rounded-full transition-all duration-300 border border-slate-700 hover:border-blue-500 shadow-xl hover:shadow-blue-500/30 w-full md:w-auto">
+                <a href="./w_report.pdf" target="_blank" class="inline-flex items-center justify-center gap-3 bg-slate-700 hover:bg-blue-600 text-white text-base md:text-lg font-bold py-4 px-8 rounded-full transition-all duration-300 border border-slate-600 hover:border-blue-500 shadow-lg hover:shadow-blue-500/30 w-full md:w-auto">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                     點此檢視 / 下載完整實務報告 (PDF)
                 </a>
@@ -185,17 +188,17 @@
         </div>
     </section>
 
-    <!-- 5. 頁尾與行動呼籲 -->
+    <!-- 5. 頁尾與行動呼籲 (配合深藍灰調整底色) -->
     <footer class="bg-corporate text-slate-300 py-16 border-t-4 border-blue-500">
         <div class="max-w-5xl mx-auto px-6 text-center">
             <h2 class="text-2xl md:text-3xl font-bold text-white mb-6">
                 「領先一步的科技，是維護品牌聲譽最強的盾牌。」
             </h2>
-            <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto">
+            <p class="text-lg text-slate-300 mb-10 max-w-2xl mx-auto">
                 漏水糾紛不應是不動產交易的必然風險。我司誠摯邀請 貴司共同建立「不動產交易安全新標準」，為消費者提供高標準的交易安全保障。
             </p>
             
-            <div class="inline-block text-left bg-slate-800/50 p-6 md:p-8 rounded-xl border border-slate-700 shadow-2xl">
+            <div class="inline-block text-left bg-slate-800/40 p-6 md:p-8 rounded-xl border border-slate-600 shadow-lg">
                 <h3 class="text-xl font-bold text-white mb-4 tracking-wider">昱揚工程有限公司</h3>
                 <div class="space-y-3 text-sm md:text-base">
                     <p><span class="text-accent font-bold mr-2">專案負責：</span>洪健智 講師</p>
@@ -204,7 +207,7 @@
                 </div>
             </div>
             
-            <div class="mt-12 text-sm text-slate-500 font-mono">
+            <div class="mt-12 text-sm text-slate-400 font-mono">
                 &copy; 2026 Yuyang Engineering Co., Ltd. All Rights Reserved.
             </div>
         </div>
